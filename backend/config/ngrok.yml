@@ -1,0 +1,11 @@
+authtoken: 22gf57a4FbEq6ggnZ322YFqnn9Z_2FKynAjEv4f9v2u7Nd1tK
+tunnels:
+  first:
+    addr: 3000
+    proto: http    
+  second:
+    addr: 8000
+    proto: http
+  third:
+    addr: 27017
+    proto: tcp
