@@ -32,10 +32,10 @@ async function authenticateUser(req,res,next){
         // console.log(req.cookies.token)
         var userName = res.githubData.login
         db = await dbo
-        var userDetails = await getUser(userName,db)
-        console.log(userDetails)
-        if(userDetails.length==0||userDetails.use)
-            res.json({isValidUser:false,redirect:"/register"})
+        // var userDetails = await getUser(userName,db)
+        // console.log(userDetails)
+        // if(userDetails.length==0||userDetails.use)
+        //     res.json({isValidUser:false,redirect:"/register"})
         else{
             res.userDetails = userDetails
             next()
