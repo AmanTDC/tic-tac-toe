@@ -31,7 +31,7 @@ async function authenticateUser(req,res,next){
         res.githubData =await getGithubData(req.cookies.token)  
         // console.log(req.cookies.token)
         var userName = res.githubData.login
-        db = await dbo
+        // db = await dbo
         // var userDetails = await getUser(userName,db)
         // console.log(userDetails)
         // if(userDetails.length==0||userDetails.use)
