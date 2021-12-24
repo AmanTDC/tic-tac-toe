@@ -83,12 +83,11 @@ io.on('connection', (socket) => {
                 var gameBoard = rooms[cur_room].gameBoard
                 var gameOver = areEqual(gameBoard,0,1,2)||areEqual(gameBoard,3,4,5)||areEqual(gameBoard,6,7,8)||areEqual(gameBoard,0,3,6)||
                 areEqual(gameBoard,1,4,7)||areEqual(gameBoard,2,5,8)||areEqual(gameBoard,0,4,8)||areEqual(gameBoard,2,4,6)
-                var draw = false
-                var c= ''
+                var draw = true
                 for(i=0;i<9;i++){
-                    c+=gameBoard[i]
+                    if(gameBoard[i]=='col')
+                        draw = false
                 }
-                draw = c=='col-xcol-xcol-xcol-xcol-xcol-xcol-xcol-xcol-x'||c=='col-ocol-ocol-ocol-ocol-ocol-ocol-ocol-ocol-o'
                 if(gameOver){
                     winner = socket.userId
                     io.sockets.in(cur_room).emit('game over',winner)
