@@ -57,7 +57,8 @@ io.on('connection', (socket) => {
                                 [keys_lobby[0]]:'col-o'
                             }
                         }
-                        userIdToRoom[socket.userId] = cur_room
+                        userIdToRoom[rooms[cur_room].player1] = cur_room
+                        userIdToRoom[rooms[cur_room].player2] = cur_room
                         io.to(cur_room).emit('show board',rooms[cur_room].gameBoard)
                     }
                 }
