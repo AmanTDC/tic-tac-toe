@@ -100,6 +100,7 @@ io.on('connection', (socket) => {
                 }
                 else if(draw){
 
+                    io.sockets.in(cur_room).emit('game over','No One')
                 }
             }
         }
