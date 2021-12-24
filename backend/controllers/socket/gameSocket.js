@@ -68,6 +68,8 @@ io.on('connection', (socket) => {
     })
     socket.on('play move', (num) => {
         if(rooms[socket.room_is]){
+            console.log(cur_room)
+            console.log(socket.userId)
             cur_room = socket.room_is
             if(rooms[cur_room].gameBoard[num]==='col'){
                 if((rooms[cur_room].move[socket.userId]=='col-x'&&rooms[cur_room].turn%2==0)||(rooms[cur_room].move[socket.userId]=='col-o'&&rooms[cur_room].turn%2==1)){
