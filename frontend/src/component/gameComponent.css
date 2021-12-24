@@ -1,0 +1,31 @@
+
+.grid{
+    display: block;
+    color:pink;
+    width:36em;
+    height: 36em;
+    background:rgb(222, 211, 211);
+}
+.row{
+    width: 36em;
+    height: 12em;
+    background-color: rgb(255, 255, 255);
+}
+.col{
+    margin : 1em 1em 1em 1em;
+    background-color: rgb(119, 104, 93);
+    width: 10em;
+    height: 10em;
+}
+.col-x{
+    margin : 1em 1em 1em 1em;
+    background-color: rgb(38, 0, 255);
+    width: 10em;
+    height: 10em;
+}
+.col-o{
+    margin : 1em 1em 1em 1em;
+    background-color: rgb(255, 0, 0);
+    width: 10em;
+    height: 10em;
+}
