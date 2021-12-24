@@ -31,8 +31,10 @@ io.on('connection', (socket) => {
                     socket.room_is = userIdToRoom[socket.userId]
                     socket.join(socket.room_is)
                     io.sockets.in(socket.room_is).emit('show board',rooms[cur_room].gameBoard)
+                    console.log("here")
                 } 
                 else {
+                    console.log("here2")
                     keys_lobby = Object.keys(lobby)
                     if(keys_lobby.length>1){
                         cur_room = `room${room_number++}`
