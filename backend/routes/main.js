@@ -20,6 +20,7 @@ app.route('/login')
     })
 app.route('/isValidUser')
     .get(authenticateUser,(req,res,next)=>{
+        console.log("hey")
         res.json({isValidUser:true})
     })
 module.exports = {
