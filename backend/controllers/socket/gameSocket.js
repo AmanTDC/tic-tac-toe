@@ -98,8 +98,10 @@ io.on('connection', (socket) => {
                     //how to leave room froms oscket
                 }
                 else if(draw){
-
                     io.sockets.in(cur_room).emit('game over','No One')
+                    delete userIdToRoom[rooms[cur_room].player1]
+                    delete userIdToRoom[rooms[cur_room].player2]
+                    delete rooms[cur_room]
                 }
             }
         }
