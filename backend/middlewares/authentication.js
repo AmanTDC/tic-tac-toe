@@ -36,10 +36,11 @@ async function authenticateUser(req,res,next){
         // console.log(userDetails)
         // if(userDetails.length==0||userDetails.use)
         //     res.json({isValidUser:false,redirect:"/register"})
-        else{
-            res.userDetails = userDetails
-            next()
-        }
+        // else{
+        //     res.userDetails = userDetails
+        //     next()
+        // }
+        next()
     }
     catch(err){
         res.json({isValidUser:false,redirect:"/"})
