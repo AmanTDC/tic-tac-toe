@@ -1,2 +1,2 @@
 const app = require('../routes/main')
-const {io} = require('../controllers/socket/gameSocket')
+const {io} = require('../socket/gameSocket')
