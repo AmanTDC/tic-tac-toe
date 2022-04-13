@@ -1,0 +1,21 @@
+.vertical-center{
+    top:50%;
+    left:50%;
+    position: absolute;
+    transform: translateY(-50%) translateX(-20%);
+}
+.logo{
+    height: 100%;
+    width: 40%;
+    left:10%;   
+    position: relative;
+    /* left:50%; */
+    /* transform: translateX(-390%); */
+}
+/* .message{
+    height: 50%;
+    width: 50%;
+    position: relative;
+    left:50%;
+    transform: translateX(-390%);
+} */

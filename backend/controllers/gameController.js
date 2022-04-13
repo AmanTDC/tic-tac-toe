@@ -46,6 +46,8 @@ const randomMatchup = (socket,io)=>{
 }
 const identifySocket = async (token,socket,io,callback)=>{
     getGithubData(token).then(response=>{
+        if(!response)
+            return
         socket.userId = response.login
         online[socket.userId] = true
         userIdToSocket[socket.userId] = socket
@@ -98,6 +100,7 @@ const playMove= (num,socket,io) => {
                 rooms[cur_room].turn++;
                 io.sockets.in(cur_room).emit('show board',rooms[cur_room].gameBoard)
                 io.sockets.in(cur_room).emit('play message','')
+                // gameTimer = 0
             }
             else
                 socket.emit('play message','It\'s not your turn')
